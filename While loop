@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class EvenOddUserInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        System.out.println("Enter numbers to check even or odd (Enter 0 to exit):");
+
+        while (true) {
+            System.out.print("Enter a number: ");
+            number = scanner.nextInt();
+
+            if (number == 0) {
+                System.out.println("Exiting program...");
+                break; 
+            }
+
+            if (number % 2 == 0) {
+                System.out.println(number + " is Even");
+            } else {
+                System.out.println(number + " is Odd");
+            }
+        }
+
+        scanner.close(); 
+    }
+}
